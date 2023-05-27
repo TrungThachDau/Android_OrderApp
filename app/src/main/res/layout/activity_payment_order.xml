@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDF1EF"
+    tools:context=".activity.PaymentOrderActivity">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_payment_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/txt_order_bill"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_below="@+id/rv_payment_main"
+        android:layout_above="@+id/slide_order_complete"
+        android:layout_toLeftOf="@+id/txt_order_bill"
+        android:textAlignment="center"
+        android:layout_margin="5sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bungee"
+        android:textSize="15sp"
+        android:text="Tổng tiền:"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_order_bill"
+        android:layout_above="@+id/slide_order_complete"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:text="0"/>
+
+    <com.ncorti.slidetoact.SlideToActView
+        android:id="@+id/slide_order_complete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:area_margin="2dp"
+        app:border_radius="8dp"
+        app:inner_color="@color/white"
+        app:outer_color="@color/black"
+        app:slider_height="45dp"
+        android:layout_toLeftOf="@+id/btn_payment_delete"
+        app:text="Thanh toán..." />
+    <ImageView
+        android:id="@+id/btn_payment_delete"
+        android:layout_alignTop="@+id/slide_order_complete"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_delete_24"/>
+
+</RelativeLayout>
